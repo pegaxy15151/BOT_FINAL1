@@ -1,0 +1,629 @@
+(env) fernando-rubio@PCFERNANDO:~/Área de trabalho/teste$ python3 optuna_optimization_fast3.py
+✅ Stable Baselines 3 importado com sucesso
+❌ Erro ao importar scalping_environment: No module named 'gym'
+Criando classes mock para teste...
+Iniciando otimização rápida...
+=== OTIMIZAÇÃO RÁPIDA COM TAXAS REAIS DA BINANCE ===
+Configurações:
+  - N_TRIALS: 25
+  - N_SPLITS: 2
+  - MINI_LOOPS: 5 x 6000 timesteps
+  - EVAL_STEPS: 750
+[I 2025-06-10 20:21:32,278] A new study created in memory with name: no-name-8357f4c1-bea3-406f-b35f-a083bdccbd57
+Iniciando otimização...
+=== TRIAL 0 ===
+Trial 0: LR=0.001316, Profit_th=0.0095, Transaction_cost=0.0003
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.00952111756019375, 'stop_loss_threshold': 0.0010215667803011497, 'max_position_time': 40, 'transaction_cost': 0.00034910874484683606, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 0: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:32,380] Trial 0 finished with value: -1.0 and parameters: {'learning_rate': 0.0013163519829525788, 'transaction_cost': 0.00034910874484683606, 'profit_threshold': 0.00952111756019375, 'stop_loss_threshold': 0.0010215667803011497}. Best is trial 0 with value: -1.0.
+=== TRIAL 1 ===
+Trial 1: LR=0.000038, Profit_th=0.0061, Transaction_cost=0.0005
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.0060817909865057505, 'stop_loss_threshold': 0.004346193622321544, 'max_position_time': 40, 'transaction_cost': 0.0004888537210245981, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 1: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:32,476] Trial 1 finished with value: -1.0 and parameters: {'learning_rate': 3.7752451134623514e-05, 'transaction_cost': 0.0004888537210245981, 'profit_threshold': 0.0060817909865057505, 'stop_loss_threshold': 0.004346193622321544}. Best is trial 0 with value: -1.0.
+=== TRIAL 2 ===
+Trial 2: LR=0.000052, Profit_th=0.0097, Transaction_cost=0.0002
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.009745056436722766, 'stop_loss_threshold': 0.0021746001447358076, 'max_position_time': 40, 'transaction_cost': 0.00023540525366453878, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 2: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:32,571] Trial 2 finished with value: -1.0 and parameters: {'learning_rate': 5.1622523548863904e-05, 'transaction_cost': 0.00023540525366453878, 'profit_threshold': 0.009745056436722766, 'stop_loss_threshold': 0.0021746001447358076}. Best is trial 0 with value: -1.0.
+=== TRIAL 3 ===
+Trial 3: LR=0.000751, Profit_th=0.0079, Transaction_cost=0.0004
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.007948901413997587, 'stop_loss_threshold': 0.001416496403796892, 'max_position_time': 40, 'transaction_cost': 0.0004048114562505223, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 3: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:32,666] Trial 3 finished with value: -1.0 and parameters: {'learning_rate': 0.0007511629204506943, 'transaction_cost': 0.0004048114562505223, 'profit_threshold': 0.007948901413997587, 'stop_loss_threshold': 0.001416496403796892}. Best is trial 0 with value: -1.0.
+=== TRIAL 4 ===
+Trial 4: LR=0.000106, Profit_th=0.0055, Transaction_cost=0.0002
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.0055079665054989825, 'stop_loss_threshold': 0.005623046979775927, 'max_position_time': 40, 'transaction_cost': 0.00022457593917925747, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 4: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:32,761] Trial 4 finished with value: -1.0 and parameters: {'learning_rate': 0.00010646744403784013, 'transaction_cost': 0.00022457593917925747, 'profit_threshold': 0.0055079665054989825, 'stop_loss_threshold': 0.005623046979775927}. Best is trial 0 with value: -1.0.
+=== TRIAL 5 ===
+Trial 5: LR=0.000050, Profit_th=0.0008, Transaction_cost=0.0004
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.000801592798948964, 'stop_loss_threshold': 0.001214571848842464, 'max_position_time': 40, 'transaction_cost': 0.00037482327408849283, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 5: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:32,855] Trial 5 finished with value: -1.0 and parameters: {'learning_rate': 5.043887087299898e-05, 'transaction_cost': 0.00037482327408849283, 'profit_threshold': 0.000801592798948964, 'stop_loss_threshold': 0.001214571848842464}. Best is trial 0 with value: -1.0.
+=== TRIAL 6 ===
+Trial 6: LR=0.000643, Profit_th=0.0068, Transaction_cost=0.0002
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.006849543291354999, 'stop_loss_threshold': 0.007387303456386852, 'max_position_time': 40, 'transaction_cost': 0.00024078156272873167, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 6: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:32,950] Trial 6 finished with value: -1.0 and parameters: {'learning_rate': 0.000642892953824132, 'transaction_cost': 0.00024078156272873167, 'profit_threshold': 0.006849543291354999, 'stop_loss_threshold': 0.007387303456386852}. Best is trial 0 with value: -1.0.
+=== TRIAL 7 ===
+Trial 7: LR=0.000896, Profit_th=0.0099, Transaction_cost=0.0002
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.009854648805847811, 'stop_loss_threshold': 0.00839895067802701, 'max_position_time': 40, 'transaction_cost': 0.00020241212392838837, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 7: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:33,046] Trial 7 finished with value: -1.0 and parameters: {'learning_rate': 0.000896199213845982, 'transaction_cost': 0.00020241212392838837, 'profit_threshold': 0.009854648805847811, 'stop_loss_threshold': 0.00839895067802701}. Best is trial 0 with value: -1.0.
+=== TRIAL 8 ===
+Trial 8: LR=0.000013, Profit_th=0.0013, Transaction_cost=0.0005
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.0012662260233768509, 'stop_loss_threshold': 0.002148172351814779, 'max_position_time': 40, 'transaction_cost': 0.00045407065636617603, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 8: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:33,141] Trial 8 finished with value: -1.0 and parameters: {'learning_rate': 1.3331653509151618e-05, 'transaction_cost': 0.00045407065636617603, 'profit_threshold': 0.0012662260233768509, 'stop_loss_threshold': 0.002148172351814779}. Best is trial 0 with value: -1.0.
+=== TRIAL 9 ===
+Trial 9: LR=0.001928, Profit_th=0.0090, Transaction_cost=0.0003
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.009020233586140432, 'stop_loss_threshold': 0.008950759776189001, 'max_position_time': 40, 'transaction_cost': 0.000297020529376208, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 9: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:33,236] Trial 9 finished with value: -1.0 and parameters: {'learning_rate': 0.0019277577009199876, 'transaction_cost': 0.000297020529376208, 'profit_threshold': 0.009020233586140432, 'stop_loss_threshold': 0.008950759776189001}. Best is trial 0 with value: -1.0.
+=== TRIAL 10 ===
+Trial 10: LR=0.009900, Profit_th=0.0036, Transaction_cost=0.0003
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.003633792461451021, 'stop_loss_threshold': 0.004150581386800681, 'max_position_time': 40, 'transaction_cost': 0.000309473295271918, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 10: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:33,347] Trial 10 finished with value: -1.0 and parameters: {'learning_rate': 0.009900207813140301, 'transaction_cost': 0.000309473295271918, 'profit_threshold': 0.003633792461451021, 'stop_loss_threshold': 0.004150581386800681}. Best is trial 0 with value: -1.0.
+=== TRIAL 11 ===
+Trial 11: LR=0.003110, Profit_th=0.0042, Transaction_cost=0.0005
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.004164155329344658, 'stop_loss_threshold': 0.0044488225450075615, 'max_position_time': 40, 'transaction_cost': 0.00048326921106147346, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 11: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:33,459] Trial 11 finished with value: -1.0 and parameters: {'learning_rate': 0.0031096156461438737, 'transaction_cost': 0.00048326921106147346, 'profit_threshold': 0.004164155329344658, 'stop_loss_threshold': 0.0044488225450075615}. Best is trial 0 with value: -1.0.
+=== TRIAL 12 ===
+Trial 12: LR=0.000154, Profit_th=0.0066, Transaction_cost=0.0004
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.006601771256121919, 'stop_loss_threshold': 4.6465711670246046e-05, 'max_position_time': 40, 'transaction_cost': 0.00041894082520011643, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 12: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:33,572] Trial 12 finished with value: -1.0 and parameters: {'learning_rate': 0.0001535448332922141, 'transaction_cost': 0.00041894082520011643, 'profit_threshold': 0.006601771256121919, 'stop_loss_threshold': 4.6465711670246046e-05}. Best is trial 0 with value: -1.0.
+=== TRIAL 13 ===
+Trial 13: LR=0.000024, Profit_th=0.0081, Transaction_cost=0.0003
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.008096360717613518, 'stop_loss_threshold': 0.006030722914784546, 'max_position_time': 40, 'transaction_cost': 0.00033634655075053194, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 13: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:33,683] Trial 13 finished with value: -1.0 and parameters: {'learning_rate': 2.3903065284198476e-05, 'transaction_cost': 0.00033634655075053194, 'profit_threshold': 0.008096360717613518, 'stop_loss_threshold': 0.006030722914784546}. Best is trial 0 with value: -1.0.
+=== TRIAL 14 ===
+Trial 14: LR=0.000238, Profit_th=0.0029, Transaction_cost=0.0004
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.0028969604282479845, 'stop_loss_threshold': 0.003421613674573755, 'max_position_time': 40, 'transaction_cost': 0.00036482248340224813, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 14: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:33,795] Trial 14 finished with value: -1.0 and parameters: {'learning_rate': 0.00023824333504828826, 'transaction_cost': 0.00036482248340224813, 'profit_threshold': 0.0028969604282479845, 'stop_loss_threshold': 0.003421613674573755}. Best is trial 0 with value: -1.0.
+=== TRIAL 15 ===
+Trial 15: LR=0.004262, Profit_th=0.0057, Transaction_cost=0.0003
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.005653937961712587, 'stop_loss_threshold': 0.00673926316953066, 'max_position_time': 40, 'transaction_cost': 0.0002809708389107115, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 15: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:33,906] Trial 15 finished with value: -1.0 and parameters: {'learning_rate': 0.004261870972879303, 'transaction_cost': 0.0002809708389107115, 'profit_threshold': 0.005653937961712587, 'stop_loss_threshold': 0.00673926316953066}. Best is trial 0 with value: -1.0.
+=== TRIAL 16 ===
+Trial 16: LR=0.000361, Profit_th=0.0076, Transaction_cost=0.0004
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.007557128076392732, 'stop_loss_threshold': 0.003169104229569894, 'max_position_time': 40, 'transaction_cost': 0.0004305824661246823, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 16: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:34,017] Trial 16 finished with value: -1.0 and parameters: {'learning_rate': 0.00036131753402909275, 'transaction_cost': 0.0004305824661246823, 'profit_threshold': 0.007557128076392732, 'stop_loss_threshold': 0.003169104229569894}. Best is trial 0 with value: -1.0.
+=== TRIAL 17 ===
+Trial 17: LR=0.000063, Profit_th=0.0046, Transaction_cost=0.0005
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.004625854388435579, 'stop_loss_threshold': 0.009857691285176337, 'max_position_time': 40, 'transaction_cost': 0.0004891382463360054, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 17: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:34,129] Trial 17 finished with value: -1.0 and parameters: {'learning_rate': 6.277183260825612e-05, 'transaction_cost': 0.0004891382463360054, 'profit_threshold': 0.004625854388435579, 'stop_loss_threshold': 0.009857691285176337}. Best is trial 0 with value: -1.0.
+=== TRIAL 18 ===
+Trial 18: LR=0.000011, Profit_th=0.0025, Transaction_cost=0.0004
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.0025077292201063175, 'stop_loss_threshold': 0.00043362862296033276, 'max_position_time': 40, 'transaction_cost': 0.00039027901637482976, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 18: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:34,240] Trial 18 finished with value: -1.0 and parameters: {'learning_rate': 1.1152539809894016e-05, 'transaction_cost': 0.00039027901637482976, 'profit_threshold': 0.0025077292201063175, 'stop_loss_threshold': 0.00043362862296033276}. Best is trial 0 with value: -1.0.
+=== TRIAL 19 ===
+Trial 19: LR=0.001633, Profit_th=0.0066, Transaction_cost=0.0003
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.006629505535832945, 'stop_loss_threshold': 0.0030533666048218125, 'max_position_time': 40, 'transaction_cost': 0.00034668857367404983, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 19: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:34,352] Trial 19 finished with value: -1.0 and parameters: {'learning_rate': 0.0016327771972320636, 'transaction_cost': 0.00034668857367404983, 'profit_threshold': 0.006629505535832945, 'stop_loss_threshold': 0.0030533666048218125}. Best is trial 0 with value: -1.0.
+=== TRIAL 20 ===
+Trial 20: LR=0.000374, Profit_th=0.0087, Transaction_cost=0.0005
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.008683440773408768, 'stop_loss_threshold': 0.0050893835391633575, 'max_position_time': 40, 'transaction_cost': 0.00045281261699662347, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 20: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:34,466] Trial 20 finished with value: -1.0 and parameters: {'learning_rate': 0.0003735073239809682, 'transaction_cost': 0.00045281261699662347, 'profit_threshold': 0.008683440773408768, 'stop_loss_threshold': 0.0050893835391633575}. Best is trial 0 with value: -1.0.
+=== TRIAL 21 ===
+Trial 21: LR=0.000031, Profit_th=0.0099, Transaction_cost=0.0003
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.009882701113359494, 'stop_loss_threshold': 0.0021637160150107387, 'max_position_time': 40, 'transaction_cost': 0.00027141724073381605, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 21: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:34,580] Trial 21 finished with value: -1.0 and parameters: {'learning_rate': 3.11572191244944e-05, 'transaction_cost': 0.00027141724073381605, 'profit_threshold': 0.009882701113359494, 'stop_loss_threshold': 0.0021637160150107387}. Best is trial 0 with value: -1.0.
+=== TRIAL 22 ===
+Trial 22: LR=0.000061, Profit_th=0.0086, Transaction_cost=0.0003
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.008632184760546962, 'stop_loss_threshold': 0.0020316262341847956, 'max_position_time': 40, 'transaction_cost': 0.0003197094599427087, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 22: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:34,693] Trial 22 finished with value: -1.0 and parameters: {'learning_rate': 6.131210858043427e-05, 'transaction_cost': 0.0003197094599427087, 'profit_threshold': 0.008632184760546962, 'stop_loss_threshold': 0.0020316262341847956}. Best is trial 0 with value: -1.0.
+=== TRIAL 23 ===
+Trial 23: LR=0.000025, Profit_th=0.0094, Transaction_cost=0.0003
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.009428877148343402, 'stop_loss_threshold': 0.0008975503276231569, 'max_position_time': 40, 'transaction_cost': 0.0002552724671401114, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 23: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:34,808] Trial 23 finished with value: -1.0 and parameters: {'learning_rate': 2.511669071519122e-05, 'transaction_cost': 0.0002552724671401114, 'profit_threshold': 0.009428877148343402, 'stop_loss_threshold': 0.0008975503276231569}. Best is trial 0 with value: -1.0.
+=== TRIAL 24 ===
+Trial 24: LR=0.000114, Profit_th=0.0073, Transaction_cost=0.0005
+Usando dados existentes: ETHUSDT_5m_5000.csv
+Criando 2 splits do arquivo ETHUSDT_5m_5000.csv
+Dataset tem 5000 linhas
+Train size: 2500, Test size: 1250
+Split 0: Train=2500, Test=1250
+Split 1: Train=2500, Test=1250
+Criados 2 splits
+Treinando modelo com: train_split_1.csv
+Mock environment criado com: {'csv_path': 'train_split_1.csv', 'live_stream': False, 'profit_threshold': 0.007349838751703495, 'stop_loss_threshold': 0.0036435271685313093, 'max_position_time': 40, 'transaction_cost': 0.00046240760228251723, 'force_dim': 20, 'use_realistic_fees': True}
+ERRO no trial 24: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 395, in objective
+    train_env = DummyVecEnv([make_env(train_path, **env_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                 ^^^^^^^^^^^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/V0/env/lib/python3.12/site-packages/stable_baselines3/common/vec_env/patch_gym.py", line 33, in _patch_env
+    raise ValueError(
+ValueError: The environment is of type <class '__main__.ImprovedScalpingEnv'>, not a Gymnasium environment. In this case, we expect OpenAI Gym to be installed and the environment to be an OpenAI Gym environment.
+
+[I 2025-06-10 20:21:34,922] Trial 24 finished with value: -1.0 and parameters: {'learning_rate': 0.00011446451808736955, 'transaction_cost': 0.00046240760228251723, 'profit_threshold': 0.007349838751703495, 'stop_loss_threshold': 0.0036435271685313093}. Best is trial 0 with value: -1.0.
+=== RESULTADOS ===
+Trials completados: 25
+Trials pruned: 0
+Melhores hiperparâmetros: {'learning_rate': 0.0013163519829525788, 'transaction_cost': 0.00034910874484683606, 'profit_threshold': 0.00952111756019375, 'stop_loss_threshold': 0.0010215667803011497}
+Melhor score: -1.000000
+Métricas do melhor trial:
+  - Total Profit: N/A
+  - Average Reward: N/A
+Traceback (most recent call last):
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 562, in <module>
+    best_params = main()
+                  ^^^^^^
+  File "/home/fernando-rubio/Área de trabalho/teste/optuna_optimization_fast3.py", line 532, in main
+    print(f"  - Win Rate: {best_trial.user_attrs.get('win_rate', 'N/A'):.2f}")
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
